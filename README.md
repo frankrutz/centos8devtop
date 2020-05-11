@@ -28,3 +28,5 @@ export DISPLAY=:1
 
 gnome-calculator
 
+#The calculator works. BUT we want to run gnome-session, which does not work.
+

@@ -13,8 +13,18 @@ docker run --name centos8devtop -d --cap-add SYS_ADMIN --rm  -p  5901:5901 test
 
 Than you jump into the container:
 
-docker exec -i -t centos8devtop sh
+docker exec -i -t -u testuser centos8devtop sh
 
-in the container: start vncserver, 
+in the container: 
 
-substitute xstartup with xstartup included in this repo, restart vncserver
+
+cd $HOME
+
+vncserver
+
+#enter some passwd 2 times and press "n"
+
+export DISPLAY=:1
+
+gnome-calculator
+

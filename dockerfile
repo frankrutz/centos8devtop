@@ -11,5 +11,11 @@ RUN yum install -y xorg-x11*
 RUN yum install -y xterm
 RUN yum install -y dbus dbus-x11 systemd 
 
+RUN adduser  testuser
+RUN mkdir /home/testuser/.vnc
+COPY xstartup /home/testuser/.vnc/xstartup
+RUN chown -R  testuser:testuser /home/testuser
+
+USER testuser
 
 CMD [ "/sbin/init"]

@@ -8,5 +8,6 @@ unset DBUS_SESSION_BUS_ADDRESS
 # /etc/X11/xinit/Xclients or ~/.Xclients yourself to achieve a different result, then you should
 
 
-
-gnome-session &
+export DISPLAY=:1
+gnome-calculator &
+#gnome-session &
